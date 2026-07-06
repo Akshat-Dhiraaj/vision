@@ -223,7 +223,7 @@ def require_bool(mapping: dict[str, Any], key: str) -> bool:
 
 def require_int(mapping: dict[str, Any], key: str) -> int:
     value = require_key(mapping, key)
-    if not isinstance(value, int):
+    if not isinstance(value, int) or isinstance(value, bool):
         raise ConfigError(f"{key} must be an integer")
     return value
 
