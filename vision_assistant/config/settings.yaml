@@ -1,0 +1,19 @@
+app:
+  name: vision_assistant
+  version: "0.1.0"
+
+camera:
+  default_index: 0
+
+stability:
+  min_duration_ms: 400
+  action_cooldown_ms: 5000
+
+lmstudio:
+  base_url: "http://localhost:1234/v1"
+
+safety:
+  allowed_action_names:
+    - open_test_page
+  allowed_action_types:
+    - website
